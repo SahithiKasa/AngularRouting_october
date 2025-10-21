@@ -8,7 +8,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrdersDetailsComponent } from './orders/orders-details/orders-details.component';
-
+import { authGuard } from './auth.guard';
 //path = address
 
 // 1. based on your path(ex:home)      ---> homelocation(homecompoennt)
@@ -37,11 +37,13 @@ const routes: Routes = [
   {
     path: 'orders',             //https://locahost:4200/aboutus
     component: OrdersComponent,
+
   },
   {
     path: 'orders-details/:orderID',             //https://locahost:4200/orders/orders-details
     //                                   http://localhost:4200/orders-details
     component: OrdersDetailsComponent,
+    canActivate:[authGuard]
   },
   {
     path:'**',                  //https://localhost:4200/akkkkkagbgggg
