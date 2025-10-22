@@ -20,7 +20,7 @@ export class OrdersDetailsComponent implements OnInit {
       console.log("From orderdetails ", result);  //{orderid:1}
 
 
-      /*this.OrderInfo = result;//{orderId:1}
+      this.OrderInfo = result;//{orderId:1}
 
       let custoemrsList = this.orderservice.getCustomersList();
       setTimeout(()=>{
@@ -29,8 +29,9 @@ export class OrdersDetailsComponent implements OnInit {
       });
 
     },1000);
+  })
      // console.log(this.SelectedCustoemrs.length)*/
-    })
+    
 
 
     this.activateRoute.queryParams.subscribe((result:any)=>{
@@ -38,7 +39,7 @@ export class OrdersDetailsComponent implements OnInit {
 
        let custoemrsList = this.orderservice.getCustomersList();
         this.SelectedCustoemrs = custoemrsList.filter((customer)=>{
-           return customer.OrderID == Number(result.ID) ;   
+           return customer.OrderID== Number(result.ID) ;   
         }); 
     })
 
