@@ -55,3 +55,4 @@ export class OrdersDetailsComponent implements OnInit {
 
 }
 }
+// Summary : I need to  focus once i  subscribed the params , queryparams , fragment i need to understand what is the

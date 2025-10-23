@@ -14,12 +14,16 @@
                     <!-- <td>{{item.OrderID}}</td> -->
 
                   <td>
-                   <a [routerLink]="['/orders-details', item.OrderID]">{{item.OrderID}}</a></td>
-                     <!-- Handle based on the Query Params -->
-                    <!--<a [routerLink]="['/orders-details']"  
+
+
+                    <!--Handle based on the Params-->
+                     <a [routerLink]="['/orders-details', item.OrderID]">{{item.OrderID}}</a>
+             
+                         <!-- Handle based on the Query Params -->
+                   <!-- <a [routerLink]="['/orders-details']"  
                            [queryParams]="{'ID':item.OrderID}">
                            {{item.OrderID}}
-                        </a>-->
+                        </a> -->
 
 
 
@@ -36,10 +40,10 @@
                     <!-- <a class="btn btn-primary"
                          (click)="evtNavigation(item.OrderID)">
                          {{item.OrderID}}</a> -->
-                         
-                    <!---- <a class="btn btn-success" (dblclick)= 
-                         "evtNavigation(item.OrderID)">
-                         {{item.OrderID}}</a>-->
+                        
+
+                 </td>
+
                     <td>{{item.OrderName}}</td>
                     <td>{{item.OrderLocation}}</td>
                 </tr>
